@@ -113,26 +113,35 @@ const SimpleLinearRegression = function (_x_vector, _y_vector) {
 	 * @param {Vector} _y_vector
 	 * @param {number} [min_x] 최소 x 범위 (기본값: _x_vector의 최솟값)
 	 * @param {number} [max_x] 최대 x 범위 (기본값: _x_vector의 최댓값)
-	 * @param {number} [term] x 간격 (기본값: 0.1)
 	 * @returns {Dot[] | undefined}
 	 */
-	const line_coords = (_x_vector, _y_vector, min_x, max_x, term = 1) => {
+	const line_coords = (_x_vector, _y_vector, min_x, max_x) => {
 		min_x ||= Math.min(..._x_vector);
 		max_x ||= Math.max(..._x_vector);
 
 		const _coefficient_x = coefficient_x(_x_vector, _y_vector);
 		const _coefficient_y = coefficient_y(_x_vector, _y_vector);
 
-		const _len = Math.ceil((max_x - min_x + 1) / term);
+		const q = (x) => _coefficient_x * x + _coefficient_y;
+		return [
+			{
+				x: min_x,
+				y: q(min_x),
+			},
+			{
+				x: max_x,
+				y: q(max_x),
+			},
+		];
 
-		return new Array(_len).fill(0).map((_, i) => {
-			// @ts-ignore
-			const _x = min_x + i * term;
-			return {
-				x: _x,
-				y: _coefficient_x * _x * _coefficient_y,
-			};
-		});
+		// return new Array(_len).fill(0).map((_, i) => {
+		// 	// @ts-ignore
+		// 	const _x = min_x + i * term;
+		// 	return {
+		// 		x: _x,
+		// 		y: _coefficient_x * _x * _coefficient_y,
+		// 	};
+		// });
 	};
 
 	return {
@@ -144,11 +153,10 @@ const SimpleLinearRegression = function (_x_vector, _y_vector) {
 		 *
 		 * @param {number} [min_x]
 		 * @param {number} [max_x]
-		 * @param {number} [term]
 		 * @returns
 		 */
-		line_coords: (min_x, max_x, term) =>
-			line_coords(_x_vector, _y_vector, min_x, max_x, term),
+		line_coords: (min_x, max_x) =>
+			line_coords(_x_vector, _y_vector, min_x, max_x),
 	};
 };
 
