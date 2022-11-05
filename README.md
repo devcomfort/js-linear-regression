@@ -1,9 +1,32 @@
-# JS Linear Regression
+# React with Bun runtime
 
-[https://for-my-wealthy-life.tistory.com/8](Linear Regression 선형회귀 파이썬 코드 예제 (보스턴 주택 가격 csv 파일))의 보스턴 주택 가격 csv 파일을 예시로 한 프로젝트입니다.
+This is a React project bootstrapped with [bun](https://bun.sh/).
 
-Matlab 수업 시간 내용이 Octave로 안 돌아가서 하는 JS 프로젝트 입니다.
+## Getting Started
 
-# `toy`의 경우 실생활, 상용, 배포 목적이 아닌 데모 버전, 시연 버전입니다.
+### Cloning the repo
 
-`csv reader`, `선형회귀에 사용되는 함수` 등을 구현하고 시연하는 프로젝트입니다.
+```sh
+bun create react ./react-bun-app
+```
+
+### Development
+
+First, run the development server.
+
+```
+bun dev
+```
+
+Open http://localhost:3000 with your browser to see the result.
+
+You can start editing the page by modifying src/App.jsx. The page auto-updates as you edit the file.
+
+## Learn More
+
+To learn more about React.js, take a look at the following resources:
+
+- [React.js Documentation](https://reactjs.org/docs/getting-started.html) - learn about React.js features.
+- [Learn React.js](https://reactjs.org/tutorial/tutorial.html) - an interactive React.js tutorial.
+
+You can check out the [React.js GitHub repository](https://github.com/facebook/react) - your feedback and contributions are welcome!
