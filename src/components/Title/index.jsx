@@ -1,7 +1,7 @@
-export default function () {
+export default function ({ children }) {
 	return (
 		<>
-			<h2>Simple Linear Regression Demo (with. Random Values)</h2>
+			<h2>{children}</h2>
 		</>
 	);
 }

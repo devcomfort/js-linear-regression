@@ -1,11 +1,21 @@
-export default function () {
+/**
+ * @typedef {object} propsArgs
+ * @property {string} title
+ * @property {*} children
+ */
+
+/**
+ *
+ * @param {propsArgs} props
+ * @returns
+ */
+export default function (props) {
+	const { title, children } = props;
+
 	return (
 		<>
-			<h3>소개 </h3>
-			<p>
-				위의 차트는 랜덤으로 생성된 100개의 2차원 좌표 값들에 대해서 선형회귀를
-				진행 후, 그래프를 그린 것입니다.
-			</p>
+			<h3>{title}</h3>
+			<p>{children}</p>
 		</>
 	);
 }
