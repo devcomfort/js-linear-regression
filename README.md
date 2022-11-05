@@ -1,3 +1,5 @@
+<div align="left">
+
 # 선형회귀 구현 모듈
 
 `Octave`에서 안 돌아가는 문법/모듈이 있는 것이 빡쳐서 만든 `JS` 기반의 선형회귀 프로젝트 (데모)
@@ -13,3 +15,5 @@
 # 참조
 
 - [다중선형회귀(Multiple Linear Regression) 예제](https://velog.io/@hyesoup/%EB%8B%A4%EC%A4%80%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80Multiple-Linear-Regression-%EC%98%88%EC%A0%9C); 이 분은 `머신러닝`을 시리즈로 정리해두셨습니다.
+
+</div>
