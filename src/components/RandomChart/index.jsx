@@ -21,6 +21,7 @@ import {
 
 /**
  * @typedef {object} propsArgs
+ * @property {number} [number_of_sample] 샘플 갯수 (기본값: 100)
  * @property {number} [height]
  * @property {number} [width]
  */
@@ -41,11 +42,15 @@ export default function (props) {
 		BarController
 	);
 
-	const { height, width } = props;
+	const { height, width, number_of_sample } = props;
 
 	const vectors = {
-		x: new Array(100).fill(0).map(() => MyMath.randomNumber(-100, 100)),
-		y: new Array(100).fill(0).map(() => MyMath.randomNumber(-100, 100)),
+		x: new Array(number_of_sample || 100)
+			.fill(0)
+			.map(() => MyMath.randomNumber(-100, 100)),
+		y: new Array(number_of_sample || 100)
+			.fill(0)
+			.map(() => MyMath.randomNumber(-100, 100)),
 	};
 
 	const LR = SimpleLinearRegression(vectors.x, vectors.y);
@@ -53,7 +58,6 @@ export default function (props) {
 	const datasets = {
 		datasets: [
 			{
-				type: "scatter",
 				label: "sample dataset",
 				data: new Array(LR.x().length).fill(0).map((_, i) => ({
 					x: LR.x()[i],
@@ -73,7 +77,7 @@ export default function (props) {
 	};
 	return (
 		<Chart
-			type="line"
+			type="scatter"
 			// @ts-ignore
 			data={datasets}
 			height={height || 480}
