@@ -66,7 +66,7 @@ export default function (props) {
 	};
 	return (
 		<Chart
-			type="scatter"
+			type="line"
 			// @ts-ignore
 			data={datasets}
 			height={height || 480}

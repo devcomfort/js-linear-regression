@@ -15,9 +15,8 @@ import {
 } from "chart.js";
 import { Chart } from "react-chartjs-2";
 import {
-	MyMath,
-	sample_data,
 	SimpleLinearRegression,
+	MyMath,
 } from "../../assets/simple_linear_regression.mjs";
 
 /**
@@ -74,7 +73,7 @@ export default function (props) {
 	};
 	return (
 		<Chart
-			type="scatter"
+			type="line"
 			// @ts-ignore
 			data={datasets}
 			height={height || 480}

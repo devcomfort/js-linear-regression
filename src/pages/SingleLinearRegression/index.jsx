@@ -1,6 +1,6 @@
-import Title from "../../components/Title";
 import Description from "../../components/Description";
 import RandomChart from "../../components/RandomChart";
+import Title from "../../components/Title";
 
 export default function () {
 	return (
