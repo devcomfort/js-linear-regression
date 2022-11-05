@@ -133,15 +133,6 @@ const SimpleLinearRegression = function (_x_vector, _y_vector) {
 				y: q(max_x),
 			},
 		];
-
-		// return new Array(_len).fill(0).map((_, i) => {
-		// 	// @ts-ignore
-		// 	const _x = min_x + i * term;
-		// 	return {
-		// 		x: _x,
-		// 		y: _coefficient_x * _x * _coefficient_y,
-		// 	};
-		// });
 	};
 
 	return {
