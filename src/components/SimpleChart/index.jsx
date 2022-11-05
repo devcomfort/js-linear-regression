@@ -7,10 +7,9 @@ import {
 	LineElement,
 	Tooltip,
 	Legend,
-	BarElement,
 	CategoryScale,
 	LineController,
-	BarController,
+	ScatterController,
 } from "chart.js";
 import { Chart } from "react-chartjs-2";
 import {
@@ -31,13 +30,12 @@ export default function (props) {
 	ChartJS.register(
 		LinearScale,
 		CategoryScale,
-		BarElement,
 		PointElement,
 		LineElement,
 		Legend,
 		Tooltip,
 		LineController,
-		BarController
+		ScatterController
 	);
 	const { height, width } = props;
 

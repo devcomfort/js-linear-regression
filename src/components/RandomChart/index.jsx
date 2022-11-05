@@ -8,8 +8,6 @@ import {
 	LineElement,
 	Tooltip,
 	Legend,
-	BarElement,
-	BarController,
 	LineController,
 	CategoryScale,
 } from "chart.js";
@@ -18,6 +16,7 @@ import {
 	SimpleLinearRegression,
 	MyMath,
 } from "../../assets/simple_linear_regression.mjs";
+import { ScatterController } from "chart.js";
 
 /**
  * @typedef {object} propsArgs
@@ -33,13 +32,12 @@ export default function (props) {
 	ChartJS.register(
 		LinearScale,
 		CategoryScale,
-		BarElement,
 		PointElement,
 		LineElement,
 		Legend,
 		Tooltip,
 		LineController,
-		BarController
+		ScatterController
 	);
 
 	const { height, width, number_of_sample } = props;
