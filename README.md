@@ -14,6 +14,7 @@
 
 # 참조
 
-- [다중선형회귀(Multiple Linear Regression) 예제](https://velog.io/@hyesoup/%EB%8B%A4%EC%A4%80%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80Multiple-Linear-Regression-%EC%98%88%EC%A0%9C); 이 분은 `머신러닝`을 시리즈로 정리해두셨습니다.
+- [Linear Regression - 단순선형회귀 정리, 회귀계수와 절편 구하기](https://velog.io/@dlskawns/Linear-Regression-%EB%8B%A8%EC%88%9C%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80-%EB%8B%A4%EC%A4%91%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%A0%95%EB%A6%AC)
+- [다중선형회귀(Multiple Linear Regression) 예제](https://velog.io/@hyesoup/%EB%8B%A4%EC%A4%80%EC%84%A0%ED%98%95%ED%9A%8C%EA%B7%80Multiple-Linear-Regression-%EC%98%88%EC%A0%9C)
 
 </div>
