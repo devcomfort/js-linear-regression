@@ -28,6 +28,7 @@ export default function () {
 				min={10}
 				max={1000}
 				step={10}
+				value={number_of_sample}
 				onChange={(e) => setNumberofSample(parseInt(e.target.value))}
 			/>
 			<span>샘플 수: {number_of_sample}</span>
