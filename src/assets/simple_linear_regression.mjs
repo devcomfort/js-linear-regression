@@ -146,8 +146,16 @@ const SimpleLinearRegression = function (_x_vector, _y_vector) {
 		 * @param {number} [max_x]
 		 * @returns
 		 */
-		line_coords: (min_x, max_x) =>
-			line_coords(_x_vector, _y_vector, min_x, max_x),
+		line_coords: (min_x, max_x) => {
+			const _performance = performance.now();
+			const _result = line_coords(_x_vector, _y_vector, min_x, max_x);
+			console.log(
+				`line_coords 소요 시간: ${new Number(
+					performance.now() - _performance
+				).toLocaleString()} ms`
+			);
+			return _result;
+		},
 	};
 };
 
